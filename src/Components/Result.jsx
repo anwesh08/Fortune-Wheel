@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import image from "../Assests/wheel.png"
+import image from "../Assets/wheel.png"
 
 function Result() {
   const coupons = [
@@ -29,34 +29,34 @@ function Result() {
     fetchData()
   }, [coupons]);
   return (
-    <div className='flex flex-col md:flex-row px-20 gap-24 md:gap-40'>
+    <div className='flex flex-col md:flex-row gap-10 md:gap-40'>
       <div className="flex items-center justify-center">
         <img src={image} alt="" className='h-48 w-48 md:h-64 md:w-64 lg:h-72 lg:w-72' />
       </div>
       <div className="flex flex-col items-center justify-center px-10">
         <div className="row px-5 mb-4">
-          <span className="text-2xl font-bold">Congrats! You Won:</span>
+          <span className="md:text-3xl font-bold">Congrats! You Won:</span>
         </div>
-        <div className="row mb-4 flex flex-col justify-center items-center">
-          <span className='text-4xl font-bold leading-normal'>
+        <div className="row mb-4 flex flex-col justify-center items-center gap-1 md:gap-3">
+          <span className='text-lg md:text-4xl font-bold leading-normal'>
             {offerName}
           </span>
-          <span className='text-4xl font-bold leading-normal'>
+          <span className='text-lg md:text-4xl font-bold leading-normal'>
             {name}
           </span>
         </div>
         <div className="flex justify-between mb-4">
-          <p className="text-white font-bold text-lg py-2 px-4 bg-custombgGray rounded-l-xl">
+          <p className="text-white font-bold text-md md:text-lg py-2 px-4 bg-custombgGray rounded-l-xl">
             {couponCode}
           </p>
-          <button className="block w-20 py-2 px-4 rounded-r-xl text-white font-bold bg-darkGreen" onClick={() => { navigator.clipboard.writeText(couponCode); }}>Copy</button>
+          <button className="block w-20 py-2 px-4 rounded-r-xl text-white font-medium bg-darkGreen" onClick={() => { navigator.clipboard.writeText(couponCode); }}>Copy</button>
         </div>
         {/* copy btn */}
         <div>
           <button
             onClick={handleClick}
             type="submit"
-            className="bg-darkGreen text-white text-md font-bold p-4 rounded-3xl w-full"
+            className="bg-darkGreen text-white text-md px-4 py-2 rounded-3xl w-full font-medium"
           >
             Close Panel & Copy
           </button>

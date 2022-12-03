@@ -1,6 +1,6 @@
 import {React, useState} from "react";
-import spinwheel from "../Assests/spinwheel.png";
-import marker from "../Assests/marker.png";
+import spinwheel from "../Assets/spinwheel.png";
+import marker from "../Assets/marker.png";
 import { useNavigate } from "react-router-dom";
  
 function Spinwheel() {

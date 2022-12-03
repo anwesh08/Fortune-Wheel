@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import image from '../Assests/wheel.png'
+import image from '../Assets/wheel.png'
 
 function Login() {
    const [content, setContent] = useState("Try Your Luck");
@@ -13,11 +13,11 @@ function Login() {
       }, 1500)
    }
    return (
-      <div className='flex flex-col md:flex-row px-20 gap-24 md:gap-40'>
+      <div className='flex flex-col md:flex-row gap-10 md:gap-40'>
          <div className="flex items-center justify-center">
             <img src={image} alt="" className='h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80' />
          </div>
-         <div className="flex flex-col items-start justify-center w-[370px]">
+         <div className="flex flex-col items-start justify-center w-[250px] md:w-[350px]">
             <div className="row mb-3">
                <span className="text-3xl font-bold">This is how EngageBud looks like in action!</span>
             </div>
@@ -51,27 +51,27 @@ function Login() {
                         />
                      </div>
                   </div>
-                  <div className="mb-4 p-3 flex border-2 border-black rounded-md">
+                  <div className="mb-4 px-3 py-0.5 md:px-4 md:py-1 flex items-center justify-center border-2 border-black rounded-md">
                      <input
                         type="checkbox"
-                        className="w-8 h-8 rounded my-2 mx-0.5 accent-black"
+                        className="w-8 h-8 rounded accent-black"
                         required
                      />
-                     <span className="px-3 text-xs font-semibold">
+                     <span className="px-4 text-[9px] md:text-xs font-semibold">
                         <p>I agreed to receiving recurring automated messages at the number I have provided.</p>
                         <p>Consent is not a condition to purchase.</p>
                      </span>
                   </div>
                   <button
                      type="submit"
-                     className="bg-darkGreen hover:bg-emerald-900 text-white font-bold py-2 px-4 rounded-3xl  w-full"
+                     className="bg-darkGreen hover:bg-emerald-900 text-white font-bold py-2 px-4 rounded-3xl w-full"
                   >{content}</button>
                </form>
-               <div className="flex flex-col items-center justify-center md:flex-row mt-2 gap-2">
-                  <span className="text-[9px] italic">
+               <div className="flex flex-col items-center justify-center md:flex-row mt-2 gap-1">
+                  <span className="text-[6px] md:text-[8px] italic">
                      *You can spin the wheel only once!
                   </span>
-                  <span className="text-[9px] italic">
+                  <span className="text-[6px] md:text-[8px] italic">
                      *If you win, you can claim the coupon for 10 minutes only!
                   </span>
                </div>
