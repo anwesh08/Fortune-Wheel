@@ -13,9 +13,9 @@ function Login() {
       }, 1500)
    }
    return (
-      <div className='flex flex-col md:flex-row gap-10 md:gap-40'>
-         <div className="flex items-center justify-center">
-            <img src={image} alt="" className='h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80' />
+      <div className='flex flex-col md:flex-row gap-10 md:gap-24 lg:gap-40'>
+         <div className="flex items-center justify-center md:shrink-0">
+            <img src={image} alt="" className='absolute -top-16 mb-10 h-56 w-56 md:top-auto md:absolute md:-left-40 md:h-72 md:w-72 lg:relative lg:h-96 lg:w-96' />
          </div>
          <div className="flex flex-col items-start justify-center w-[250px] md:w-[350px]">
             <div className="row mb-3">
@@ -57,7 +57,7 @@ function Login() {
                         className="w-8 h-8 rounded accent-black"
                         required
                      />
-                     <span className="px-4 text-[9px] md:text-xs font-semibold">
+                     <span className="px-4 text-[9px] md:text-[10px] font-semibold">
                         <p>I agreed to receiving recurring automated messages at the number I have provided.</p>
                         <p>Consent is not a condition to purchase.</p>
                      </span>

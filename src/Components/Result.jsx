@@ -29,30 +29,30 @@ function Result() {
     fetchData()
   }, [coupons]);
   return (
-    <div className='flex flex-col md:flex-row gap-10 md:gap-40'>
+    <div className='flex flex-col md:flex-row gap-10 md:gap-24 lg:gap-40'>
       <div className="flex items-center justify-center">
-        <img src={image} alt="" className='h-48 w-48 md:h-64 md:w-64 lg:h-72 lg:w-72' />
+        <img src={image} alt="" className='h-56 w-56 md:h-72 md:w-72 lg:h-96 lg:w-96' />
       </div>
       <div className="flex flex-col items-center justify-center px-10">
         <div className="row px-5 mb-4">
-          <span className="md:text-3xl font-bold">Congrats! You Won:</span>
+          <span className="md:text-2xl lg:text-3xl font-bold">Congrats! You Won:</span>
         </div>
-        <div className="row mb-4 flex flex-col justify-center items-center gap-1 md:gap-3">
-          <span className='text-lg md:text-4xl font-bold leading-normal'>
+        <div className="row mb-8 flex flex-col justify-center items-center gap-1 md:gap-3">
+          <span className='text-lg md:text-2xl lg:text-4xl font-bold leading-normal'>
             {offerName}
           </span>
-          <span className='text-lg md:text-4xl font-bold leading-normal'>
+          <span className='text-lg md:text-2xl lg:text-4xl font-bold leading-normal'>
             {name}
           </span>
         </div>
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between mb-6">
           <p className="text-white font-bold text-md md:text-lg py-2 px-4 bg-custombgGray rounded-l-xl">
             {couponCode}
           </p>
           <button className="block w-20 py-2 px-4 rounded-r-xl text-white font-medium bg-darkGreen" onClick={() => { navigator.clipboard.writeText(couponCode); }}>Copy</button>
         </div>
         {/* copy btn */}
-        <div>
+        <div className='row'>
           <button
             onClick={handleClick}
             type="submit"

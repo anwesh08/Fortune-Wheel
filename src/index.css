@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 .bgImage{
-  background-image: url("./Assests/upper-bg-desktop.png"), url("./Assests/lower-bg-desktop.png");
+  background-image: url("./Assets/upper-bg-desktop.png"), url("./Assets/lower-bg-desktop.png");
   background-repeat: no-repeat;
   background-position: top center, bottom center;
-  background-size: 100% 80%, 100% 80%;
+  background-size: 100% 75%, 100% 75%;
+}
+
+@media screen and (max-width: 749px) {
+  .bgImage{
+    background-image: url("./Assets/bg-upper-mobile.png"), url("./Assets/bg-lower-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 25%, 100% 25% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .bgImage{
+    background-image: url("./Assets/bg-upper-mobile.png"), url("./Assets/bg-lower-tablet.png");
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 50%, 100% 50%;
+  }
 }
